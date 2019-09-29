@@ -38,6 +38,13 @@ add_subdirectory(04-functions/DemoSwapTemplate)
 
 add_subdirectory(04-functions/DemoChrono)
 
+# add_subdirectory(04-functions/HomeWork/MaxFunctionOverload)
+# add_subdirectory(04-functions/HomeWork/BubbleSortWithTemplate)
+
+add_subdirectory(05-contaners/DemoVectorArray)
+add_subdirectory(05-contaners/DemoSetMiltiset)
+
+
 set(CMAKE_CXX_STANDARD 14)
 
 add_executable(prCPP_1sem main.cpp)
