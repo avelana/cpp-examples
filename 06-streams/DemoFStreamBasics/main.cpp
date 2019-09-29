@@ -40,32 +40,36 @@ int main() {
 //  cout << "str_line = " << str_line_without_space << '\n';
 
   string file_path;
-  cout << "6) Input the name of the file: (remember - the file must be at the same folder as *.exe "
-       << "or write the full file path)\n";
-  cin >> file_path;
+//  cout << "6) Input the name of the file: (remember - the file must be at the same folder as *.exe "
+//       << "or write the full file path)\n";
+//  cin >> file_path;
+//
+//  if (!ReadFileByLine(file_path)) {
+//    cerr << "It is not possible to open input file \"" << file_path << "\"\n";
+//  }
+//
+//  if (!ReadFileByString(file_path)) {
+//    cerr << "It is not possible to open input file \"" << file_path << "\"\n";
+//  }
+//
+//  // Reading formatted file
+//  string file_date_path = "data/dates.txt";
+//
+//  if (!ReadFileByLineTillDelimiter(file_date_path)) {
+//    cerr << "It is not possible to open input file \"" << file_date_path << "\"\n";
+//  }
+//
+//  if (!ReadFileByInt(file_date_path)) {
+//    cerr << "It is not possible to open input file \"" << file_date_path << "\"\n";
+//  }
+//
+//  if (!ReadFileToStringStream(file_date_path)) {
+//    cerr << "It is not possible to open input file \"" << file_date_path << "\"\n";
+//  }
 
-  if (!ReadFileByLine(file_path)) {
-    cerr << "It is not possible to open input file \"" << file_path << "\"\n";
-  }
 
-  if (!ReadFileByString(file_path)) {
-    cerr << "It is not possible to open input file \"" << file_path << "\"\n";
-  }
 
-  // Reading formatted file
-  string file_date_path = "data/dates.txt";
-
-  if (!ReadFileByLineTillDelimiter(file_date_path)) {
-    cerr << "It is not possible to open input file \"" << file_date_path << "\"\n";
-  }
-
-  if (!ReadFileByInt(file_date_path)) {
-    cerr << "It is not possible to open input file \"" << file_date_path << "\"\n";
-  }
-
-  if (!ReadFileToStringStream(file_date_path)) {
-    cerr << "It is not possible to open input file \"" << file_date_path << "\"\n";
-  }
 
   return 0;
+
 }

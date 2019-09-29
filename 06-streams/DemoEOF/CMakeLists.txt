@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.14)
-project(DemoFStreamBasics)
+project(DemoEOF)
 
 set(CMAKE_CXX_STANDARD 14)
 
@@ -9,4 +9,5 @@ file(GLOB MY_DATA
         )
 file(COPY ${MY_DATA} DESTINATION data)
 
-add_executable(DemoFStreamBasics main.cpp io_file.h io_file.cpp)
+add_executable(DemoEOF main.cpp)
+
