@@ -1,0 +1,16 @@
+cmake_minimum_required(VERSION 3.14)
+project(prCPP_1sem)
+
+add_subdirectory(01-linear-algorithms/HelloWorld)
+add_subdirectory(01-linear-algorithms/DemoDataTypes)
+add_subdirectory(01-linear-algorithms/DemoAssignment)
+add_subdirectory(01-linear-algorithms/DemoCMath)
+
+add_subdirectory(01-linear-algorithms/DemoLocal)
+add_subdirectory(01-linear-algorithms/DemoLocal-ver2)
+
+add_subdirectory(01-linear-algorithms/DemoComma)
+
+set(CMAKE_CXX_STANDARD 14)
+
+add_executable(prCPP_1sem main.cpp)
