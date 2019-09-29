@@ -1,4 +1,3 @@
-text of the file:
 the first line
 the second line
 the third line
