@@ -34,7 +34,6 @@ add_subdirectory(04-functions/DemoConstReference)
 add_subdirectory(04-functions/DemoInline)
 add_subdirectory(04-functions/DemoOverload)
 add_subdirectory(04-functions/DemoSqrtK)
-add_subdirectory(04-functions/DemoSwapOverload)
 add_subdirectory(04-functions/DemoSwapTemplate)
 
 add_subdirectory(04-functions/DemoChrono)
