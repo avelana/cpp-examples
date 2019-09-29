@@ -11,6 +11,12 @@ add_subdirectory(01-linear-algorithms/DemoLocal-ver2)
 
 add_subdirectory(01-linear-algorithms/DemoComma)
 
+add_subdirectory(02-selection-statements/DemoScope)
+add_subdirectory(02-selection-statements/DemoSqrt)
+add_subdirectory(02-selection-statements/DemoStaticAssert)
+add_subdirectory(02-selection-statements/DemoSwitch)
+add_subdirectory(02-selection-statements/DemoTernaryStatement)
+
 set(CMAKE_CXX_STANDARD 14)
 
 add_executable(prCPP_1sem main.cpp)
