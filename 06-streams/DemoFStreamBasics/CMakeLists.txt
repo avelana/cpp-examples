@@ -3,7 +3,7 @@ project(DemoFStreamBasics)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(DemoFStreamBasics main.cpp)
+add_executable(DemoFStreamBasics main.cpp io_file.h io_file.cpp)
 
 file(GLOB MY_DATA
         "data/*.txt"
