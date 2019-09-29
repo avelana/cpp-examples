@@ -17,6 +17,14 @@ add_subdirectory(02-selection-statements/DemoStaticAssert)
 add_subdirectory(02-selection-statements/DemoSwitch)
 add_subdirectory(02-selection-statements/DemoTernaryStatement)
 
+add_subdirectory(03-loop-statements/Demo2DementionalArray)
+add_subdirectory(03-loop-statements/DemoBubbleSort)
+add_subdirectory(03-loop-statements/DemoForLoop)
+add_subdirectory(03-loop-statements/DemoInsertSort)
+add_subdirectory(03-loop-statements/DemoInsertSortBinarySearch)
+add_subdirectory(03-loop-statements/DemoSelectionSort)
+add_subdirectory(03-loop-statements/DemoShakerSort)
+
 set(CMAKE_CXX_STANDARD 14)
 
 add_executable(prCPP_1sem main.cpp)
