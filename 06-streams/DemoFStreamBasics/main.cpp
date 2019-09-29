@@ -40,13 +40,13 @@ int main() {
 //  cout << "str_line = " << str_line_without_space << '\n';
 
   string file_path;
-//  cout << "6) Input the name of the file: (remember - the file must be at the same folder as *.exe "
-//       << "or write the full file path)\n";
-//  cin >> file_path;
-//
-//  if (!ReadFileByLine(file_path)) {
-//    cerr << "It is not possible to open input file \"" << file_path << "\"\n";
-//  }
+  cout << "6) Input the name of the file: (remember - the file must be at the same folder as *.exe "
+       << "or write the full file path)\n";
+  cin >> file_path;
+
+  if (!ReadFileByLine(file_path)) {
+    cerr << "It is not possible to open input file \"" << file_path << "\"\n";
+  }
 //
 //  if (!ReadFileByString(file_path)) {
 //    cerr << "It is not possible to open input file \"" << file_path << "\"\n";
@@ -67,9 +67,24 @@ int main() {
 //    cerr << "It is not possible to open input file \"" << file_date_path << "\"\n";
 //  }
 
+// ЗАПИСЬ В ФАЙЛ
 
+  const string path = "data/output.txt";
+  if ( ! WriteToFile(path, " Hello")) {
+    cerr << "It is not possible to open input file \"" << file_path << "\"\n";
+  }
+
+  if ( ! WriteToFile(path, " World")) {
+    cerr << "It is not possible to open input file \"" << file_path << "\"\n";
+  }
+
+  if (!ReadFileByLine(path)) {
+    cerr << "It is not possible to open input file \"" << file_path << "\"\n";
+  }
 
 
   return 0;
+
+
 
 }

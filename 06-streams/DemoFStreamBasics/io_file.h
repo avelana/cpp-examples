@@ -6,10 +6,12 @@
 #define STREAMS_DEMOFSTREAMBASICS_IO_FILE_H_
 #include <string>
 
-bool ReadFileByLine(std::string file_path);
-bool ReadFileByString(std::string file_path);
-bool ReadFileByLineTillDelimiter(std::string file_path);
-bool ReadFileByInt(std::string file_path);
-bool ReadFileToStringStream(std::string file_path);
+bool ReadFileByLine(const std::string &file_path);
+bool ReadFileByString(const std::string &file_path);
+bool ReadFileByLineTillDelimiter(const std::string &file_path);
+bool ReadFileByInt(const std::string &file_path);
+bool ReadFileToStringStream(const std::string &file_path);
+
+bool WriteToFile(const std::string &file_path, const std::string &str);
 
 #endif //STREAMS_DEMOFSTREAMBASICS_IO_FILE_H_

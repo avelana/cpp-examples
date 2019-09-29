@@ -12,7 +12,7 @@ using namespace std;
 /*
  * чтения файла getline()
  */
-bool ReadFileByLine(std::string file_path) {
+bool ReadFileByLine(const std::string &file_path) {
   ifstream fin{file_path}; // fin - входной поток для файла file_path
   string line;
   if (fin.is_open()) {
@@ -31,7 +31,7 @@ bool ReadFileByLine(std::string file_path) {
 /*
  * чтения файла >>
  */
-bool ReadFileByString(std::string file_path) {
+bool ReadFileByString(const std::string &file_path) {
   ifstream fin{file_path};
   string line;
   if (fin.is_open()) {
@@ -51,10 +51,8 @@ bool ReadFileByString(std::string file_path) {
 /*
  * The date format:29.09.2019 03:00
  */
-
-bool ReadFileByLineTillDelimiter(std::string file_path) {
-  // ТРЕТИЙ способ чтения файла (до разделителя)
-
+// чтение файла (до разделителя)
+bool ReadFileByLineTillDelimiter(const std::string &file_path) {
   ifstream fin{file_path};
   if (fin.is_open()) {
     cout << "The content of the file \"" << file_path << "\":\n";
@@ -84,7 +82,7 @@ bool ReadFileByLineTillDelimiter(std::string file_path) {
 
 }
 
-bool ReadDateFileByInt(std::string file_path) {
+bool ReadDateFileByInt(const std::string &file_path) {
 
   ifstream fin{file_path};
   if (fin.is_open()) {
@@ -132,7 +130,7 @@ bool ReadDateFileByInt(std::string file_path) {
   return true;
 }
 
-bool ReadDateFileToStringStream(std::string file_path) {
+bool ReadDateFileToStringStream(const std::string &file_path) {
 
   ifstream fin{file_path};
 
@@ -164,6 +162,14 @@ bool ReadDateFileToStringStream(std::string file_path) {
     cout << "error!" << endl;
     return false;
   }
+  return true;
+}
+
+
+bool WriteToFile(const string &file_path, const string &str){
+ // ofstream output(file_path);
+  ofstream output(file_path, ios::app);
+  output << str << endl;
   return true;
 }
 
