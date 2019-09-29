@@ -1,5 +1,5 @@
 #include <iostream>
-#include "std_lib_facilities.h"
+//#include "std_lib_facilities.h"
 using namespace std;
 
 int main() {
@@ -20,8 +20,8 @@ int main() {
     cout << "dl - отрицательно ";
   }
 
-  int aa = 65;//20000;
-  char c = aa; // сужающее преобразование
+  int a = 65;//20000;
+  char c = a; // сужающее преобразование
 // в маленькую переменную типа cha r
   int b = c;
   if (a != b) {
@@ -56,8 +56,8 @@ int main() {
 //  int а (1000} ; // OK
 //  char b (а} ; // Ошибка : int -> char может быть сужающим
 
-  int a = 2;
-  if (!(0 < a && a < b && b < c))
+  int aa = 2;
+  if (!(0 < aa && aa < b && b < c))
     // еrrоr(" Неверные аргументы функции mcf");
     return 0;
 }
