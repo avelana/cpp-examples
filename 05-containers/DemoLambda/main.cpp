@@ -151,8 +151,7 @@ int main() {
   int data[] = { 1, 2, 3, 4, 4, 3, 7, 8, 9, 10 };
   std::vector<int> ve(data, data+10);
 
-  int num_items1 = std::count_if(begin(ve), end(ve),
-      [](int& x) {return x % 3 == 0;});
+  int num_items1 = std::count_if(begin(ve), end(ve), [](int &x) { return x % 3 == 0; });
   std::cout << "The number of numbers divisible by three: " << num_items1 << '\n';
 
   return 0;

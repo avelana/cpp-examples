@@ -19,7 +19,11 @@ add_subdirectory(02-selection-statements/DemoTernaryStatement)
 
 add_subdirectory(03-loop-statements/Demo2DementionalArray)
 add_subdirectory(03-loop-statements/DemoBubbleSort)
-add_subdirectory(03-loop-statements/DemoForLoop)
+add_subdirectory(03-loop-statements/DemoLoops)
+add_subdirectory(03-loop-statements/DemoBreakContinue)
+add_subdirectory(03-loop-statements/DemoAuto)
+add_subdirectory(03-loop-statements/DemoIsPalindrome)
+
 add_subdirectory(03-loop-statements/DemoInsertSort)
 add_subdirectory(03-loop-statements/DemoInsertSortBinarySearch)
 add_subdirectory(03-loop-statements/DemoSelectionSort)
@@ -38,11 +42,20 @@ add_subdirectory(04-functions/DemoSwapTemplate)
 
 add_subdirectory(04-functions/DemoChrono)
 
-# add_subdirectory(04-functions/HomeWork/MaxFunctionOverload)
-# add_subdirectory(04-functions/HomeWork/BubbleSortWithTemplate)
+add_subdirectory(04-functions/HomeWork/MaxFunctionOverload)
+add_subdirectory(04-functions/HomeWork/BubbleSortWithTemplate)
 
-add_subdirectory(05-contaners/DemoVectorArray)
-add_subdirectory(05-contaners/DemoSetMiltiset)
+add_subdirectory(05-containers/DemoVectorArray)
+add_subdirectory(05-containers/DemoSetMiltiset)
+add_subdirectory(05-containers/DemoMapMultimap)
+
+add_subdirectory(05-containers/DemoStlBasicAlgorithms)
+add_subdirectory(05-containers/DemoLambda)
+
+
+add_subdirectory(06-streams/DemoFStreamBasics)
+add_subdirectory(06-streams/DemoEOF)
+add_subdirectory(06-streams/DemoFunctionValues)
 
 
 set(CMAKE_CXX_STANDARD 14)
