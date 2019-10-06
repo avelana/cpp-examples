@@ -19,5 +19,13 @@ int main(int argc, wchar_t *argv[]) {
 
   std::wcout << L"символ = " << ch << ".\n";
 
+//  auto  tmp = GetConsoleOutputCP();
+//  string test = u8"Russian:вапршывгарп Greek: αβγδ; German: Übergrößenträger";
+//  SetConsoleOutputCP(CP_UTF8);
+//  cout << test;
+
+//  SetConsoleOutputCP(tmp);
+
+
   return 0;
 }
