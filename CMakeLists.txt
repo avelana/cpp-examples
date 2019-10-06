@@ -59,6 +59,7 @@ add_subdirectory(06-streams/DemoFunctionValues)
 
 add_subdirectory(07-structures-classes/DemoStructure)
 add_subdirectory(07-structures-classes/DemoStructureInitValues)
+add_subdirectory(07-structures-classes/DemoStructure&Functions)
 
 
 set(CMAKE_CXX_STANDARD 14)
