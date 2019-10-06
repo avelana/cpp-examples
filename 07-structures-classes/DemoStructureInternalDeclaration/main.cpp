@@ -27,10 +27,13 @@ int main() {
     }
   };
 
-  Company myCompany{{3, 35, 55000.0f}, 7};
+  Company myCompany{{3, 35, 2050.0f}, 7};
+
   cout << myCompany.to_string();
 
   cout << "myCompany.CEO.id = " << myCompany.CEO.id << '\n';
 
+  Company ourCompany = myCompany;
+  cout << ourCompany.to_string();
   return 0;
 }
