@@ -65,6 +65,8 @@ add_subdirectory(07-structures-classes/DemoClass)
 add_subdirectory(07-structures-classes/DemoClassGeometry)
 add_subdirectory(07-structures-classes/DemoOperatorOverloading)
 add_subdirectory(07-structures-classes/DemoFriendFunctions)
+add_subdirectory(07-structures-classes/DemoConstructors&ObjectInitialization)
+add_subdirectory(07-structures-classes/DemoOwn_to_string)
 
 
 set(CMAKE_CXX_STANDARD 14)
