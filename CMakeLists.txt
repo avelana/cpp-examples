@@ -79,6 +79,7 @@ add_subdirectory(10-Memory/DemoStack)
 
 add_subdirectory(11-oop/DemoEnum)
 add_subdirectory(11-oop/DemoStucture)
+add_subdirectory(11-oop/DemoPolymorphism)
 add_subdirectory(11-oop/DemoTemperatureMeasure)
 
 
