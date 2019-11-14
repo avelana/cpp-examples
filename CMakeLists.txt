@@ -68,7 +68,20 @@ add_subdirectory(07-structures-classes/DemoFriendFunctions)
 add_subdirectory(07-structures-classes/DemoConstructors&ObjectInitialization)
 add_subdirectory(07-structures-classes/DemoOwn_to_string)
 
+add_subdirectory(08-exceptions/DemoTryCatchThrow)
+add_subdirectory(08-exceptions/DemoDivide)
+add_subdirectory(08-exceptions/DemoException)
+add_subdirectory(08-exceptions/DemoGlog)
+
+add_subdirectory(09-unittesting/DemoGoogleTest)
+add_subdirectory(10-Memory/DemoPointers)
+add_subdirectory(10-Memory/DemoStack)
+
+add_subdirectory(11-oop/DemoEnum)
+add_subdirectory(11-oop/DemoStucture)
+add_subdirectory(11-oop/DemoTemperatureMeasure)
+
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(prCPP_1sem main.cpp)
+add_executable(prCPP_1sem main.cpp 11-oop/DemoStucture/src/NodeStack.h)
