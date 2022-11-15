@@ -97,7 +97,7 @@ Array ArrayCreator::createArray(ArrayMode mode, const std::map<KEYS, void*>& par
 size_t ArrayCreator::findArraySizeParam(const std::map<KEYS, void*>& params) {
     if (params.count(SIZE)) {
         void* ptr = params.at(SIZE);
-        __int64 tmp = *static_cast<__int64*>(ptr);
+        __int64 tmp = *(static_cast<__int64*>(ptr));
         if (tmp >= 0) {
             return static_cast<size_t>(tmp);
         } else
