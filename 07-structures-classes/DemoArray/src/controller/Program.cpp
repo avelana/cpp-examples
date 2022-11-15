@@ -223,15 +223,13 @@ int Program::main() {
         IOConsole::show(arr11);
 
         int n = 9;
-        try {
-            Array arr22 = arrayCreator.createArray(ARRAY_DEFAULT, {{SIZE, &n}});
-            IOConsole::show("%% 2) default array, ");
-            IOConsole::show(arr22);
-        } catch (const char* ex) {
-            Logger::out(ex);
-        }
+        Array arr22 = arrayCreator.createArray(ARRAY_DEFAULT, {{SIZE, &n}});
+        IOConsole::show("%% 2) default array, ");
+        IOConsole::show(arr22);
+
         double value = 7.7;
-        Array arr33 = arrayCreator.createArray(ARRAY_VALUE, {{SIZE, &n}, {VALUE, &value}});
+        Array arr33 = arrayCreator
+            .createArray(ARRAY_VALUE, {{SIZE, &n}, {VALUE, &value}});
         IOConsole::show("%% 3) fill array by value, ");
         IOConsole::show(arr33);
 

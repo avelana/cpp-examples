@@ -5,12 +5,15 @@
 #ifndef FILEREADER_H
 #define FILEREADER_H
 #include <string>
+#include <vector>
 
-class FileReader {
+
+class FileReader
+{
 public:
-    void read(const std::string& filePath, std::vector<int>& list);
-    void read(const std::string& filePath, std::vector<double>& list);
-    void read(const std::string& filePath, std::vector<std::string>& list);
+    void read(const std::string &filePath, std::vector<int> &list);
+    void read(const std::string &filePath, std::vector<double> &list);
+    void read(const std::string &filePath, std::vector<std::string> &list);
 };
 
 
