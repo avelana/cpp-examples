@@ -1,0 +1,69 @@
+# Base on Qt Coding Style: https://wiki.qt.io/Qt_Coding_Style
+
+---
+## General
+# Webkit style was loosely based on the Qt style
+BasedOnStyle: WebKit
+
+Language: Cpp
+Standard: c++17
+
+
+## Alignment
+UseTab: Never
+IndentWidth: 4
+ContinuationIndentWidth: 4
+ColumnLimit: 100
+
+MaxEmptyLinesToKeep: 2
+
+BreakBeforeBraces: Attach
+# Place closing bracket on a new line
+AlignAfterOpenBracket: BlockIndent
+# AllowAllParametersOfDeclarationOnNextLine: true
+# AllowAllArgumentsOnNextLine: true
+# BinPackParameters: false
+
+BreakBeforeBinaryOperators: NonAssignment
+BreakBeforeTernaryOperators: true
+AlwaysBreakBeforeMultilineStrings: true
+
+ConstructorInitializerIndentWidth: 4
+# When constructor initializers do not fit on one line, put them each on a new line.
+ConstructorInitializerAllOnOneLineOrOnePerLine: true
+# Break constructor initializers before the colon and after the commas.
+BreakConstructorInitializers: BeforeColon
+
+AllowShortFunctionsOnASingleLine: Inline
+
+
+## Control structures
+IndentCaseLabels: true
+# Doesn't work
+# InsertBraces: true
+SeparateDefinitionBlocks: Always
+
+
+## Templates
+# We use template< without space.
+SpaceAfterTemplateKeyword: false
+AlwaysBreakTemplateDeclarations: true
+
+
+## Namespaces
+NamespaceIndentation: None
+# Adds a comment for closing namespace brace
+FixNamespaceComments: true
+
+
+## Initializer lists
+Cpp11BracedListStyle: true
+SpaceBeforeCpp11BracedList: false
+
+
+## Preprocessing directives
+# Allow indentation for preprocessing directives (if/ifdef/endif). https://reviews.llvm.org/rL312125
+IndentPPDirectives: BeforeHash
+SortIncludes: true
+# macros for which the opening brace stays attached.
+ForEachMacros: [ foreach, Q_FOREACH, BOOST_FOREACH, forever, Q_FOREVER, QBENCHMARK, QBENCHMARK_ONCE ]

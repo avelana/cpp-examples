@@ -40,7 +40,7 @@ int main() {
   ++c2;
   std::cout << "a, after modification through c2 = " << a << '\n';
 
-//  auto [v, w] = f<0>(); //structured binding declaration
+  //  auto [v, value_] = f<0>(); //structured binding declaration
 
   auto d = {1, 2}; // OK: type of d is std::initializer_list<int>
   auto n = {5};    // OK: type of n is std::initializer_list<int>

@@ -9,16 +9,16 @@
 class Human {
  private:
   std::string name_;
-  int age_;
+     int age_;
 
  public:
-  Human(std::string name, int age)
-      : name_(name), age_(age) {
-  }
+     Human(std::string name, int age) : name_(name), age_(age) { }
 
-  std::string getName() { return name_; }
-  int getAge() { return age_; }
-  std::string toString() { return "Human"; }
+     std::string getName() { return name_; }
+
+     int getAge() { return age_; }
+
+     std::string toString() { return "Human{" + name_ + ", " + std::to_string(age_) + "}"; }
 };
 
 #endif //DEMOMULTIPLEINHERITANCE_SRC_HUMAN_H_

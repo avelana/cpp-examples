@@ -17,7 +17,7 @@ void Print(const std::vector<int> &values) {
     std::cout << value << ", ";
   }
   std::cout << "] -- ";
-  std::cout << "size = " << values.size() << "\n";
+  std::cout << "Size = " << values.size() << "\n";
 }
 
 // --------------------------------------------------------------------------
@@ -145,21 +145,21 @@ void MiscDemo() {
   // ------- std::count_if
 
   // int count_if_predicate =
-  //     std::count_if(values.begin(), values.end(), [](int value) {
-  //       return value % 2 == 0;
-  //       // return value > 4;
+  //     std::count_if(values.begin(), values.end(), [](int value_) {
+  //       return value_ % 2 == 0;
+  //       // return value_ > 4;
   //     });
   // std::cout << count_if_predicate << '\n';
 
   // ------- std::remove_if
 
-  // auto new_end = std::remove_if(values.begin(), values.end(), [](int value) {
-  //   return value % 2 == 0;
+  // auto new_end = std::remove_if(values.begin(), values.end(), [](int value_) {
+  //   return value_ % 2 == 0;
   // });
   // Print(values);
   //
   // int new_size = new_end - values.begin();
-  // std::cout << "New size = " << new_size << '\n';
+  // std::cout << "New Size = " << new_size << '\n';
   //
   // values.resize(new_size);
   // Print(values);
@@ -216,40 +216,40 @@ void StdFunctionDemo() {
   // std::vector<int> values = {1, 2, 3, 3, 3, 4, 4, 5, 6, 1, 1, 1, 10, 11};
   // Print(values);
 
-  // ------- Передача функций
+    // ------- Передача функций
 
-  // int even_count = CountIf(values, IsEven);
-  // int odd_count = CountIf(values, IsOdd);
-  // std::cout << "Even count: " << even_count << '\n';
-  // std::cout << "Odd count:  " << odd_count << '\n';
+    // int even_count = CountIf(values, IsEven);
+    // int odd_count = CountIf(values, IsOdd);
+    // std::cout << "Even count: " << even_count << '\n';
+    // std::cout << "Odd count:  " << odd_count << '\n';
 
-  // ------- Передача лямбда-выражений
+    // ------- Передача лямбда-выражений
 
-  // int count_if_predicate = CountIf(values, [](int value) {
-  //   return value % 2 == 0;
-  //   // return value > 4;
-  // });
-  // std::cout << count_if_predicate << '\n';
+    // int count_if_predicate = CountIf(values, [](int value_) {
+    //   return value_ % 2 == 0;
+    //   // return value_ > 4;
+    // });
+    // std::cout << count_if_predicate << '\n';
 
-  // ------- Переменные типа std::function и фукнции
+    // ------- Переменные типа std::function и фукнции
 
-  // std::function<bool(int)> predicate = IsOdd;
-  // // std::function<bool(int)> predicate = IsOdd();  // -- ERROR
-  // int even_count = CountIf(values, predicate);
-  //
-  // predicate = IsEven;
-  // int odd_count = CountIf(values, predicate);
-  //
-  // std::cout << "Even count: " << even_count << '\n';
-  // std::cout << "Odd count:  " << odd_count << '\n';
+    // std::function<bool(int)> predicate = IsOdd;
+    // // std::function<bool(int)> predicate = IsOdd();  // -- ERROR
+    // int even_count = CountIf(values, predicate);
+    //
+    // predicate = IsEven;
+    // int odd_count = CountIf(values, predicate);
+    //
+    // std::cout << "Even count: " << even_count << '\n';
+    // std::cout << "Odd count:  " << odd_count << '\n';
 
-  // ------- Переменные типа std::function и лямбда-выражения
+    // ------- Переменные типа std::function и лямбда-выражения
 
-  // predicate = [](int value) {
-  //   // return value % 2 == 0;
-  //   return value >= 10;
-  // };
-  // std::cout << "CountIf() = " << CountIf(values, predicate) << '\n';
+    // predicate = [](int value_) {
+    //   // return value_ % 2 == 0;
+    //   return value_ >= 10;
+    // };
+    // std::cout << "CountIf() = " << CountIf(values, predicate) << '\n';
 }
 
 // --------------------------------------------------------------------------

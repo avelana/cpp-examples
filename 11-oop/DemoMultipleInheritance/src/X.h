@@ -9,8 +9,8 @@ class X {
  protected:
   int value_;
  public:
-  X() { value_ = 0; }
-  X(int val) : value_(val) {}
+     // X() { value_ = 0; }
+     X(int val) : value_(val) {}
 };
 
 class Y : public virtual X {
@@ -39,9 +39,4 @@ class Q : public Y, public Z {
 };
 
 #endif //PRCPP_1SEM_11_OOP_DEMOMULTIPLEINHERITANCE_SRC_X_H_
-class A {
- public:
-  class B {
 
-  }
-}

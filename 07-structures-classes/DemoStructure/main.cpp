@@ -4,15 +4,19 @@
 using namespace std;
 
 struct Lesson {
-  string title;
-  string date;
-  string time;
-  unsigned short room;
-  string to_string() const {
-    return "Lesson[Title: " + title + ", date: " + date + ", time: " + time
-        + ", room: " + std::to_string(room) + "]\n";
-  }
-}
+    string title;
+    string date;
+    string time;
+    unsigned short room;
+
+    string to_string() const {
+        return "Lesson[Title: " + title + ", date: " + date + ", time: " + time
+            + ", room: " + std::to_string(room) + hello() + "]\n";
+    }
+
+    string hello() const { return "hello"; }
+};
+
 //void PrintLesson(const string &title, const string &date, const string &time, unsigned short &room) {
 //  cout << "Title: " << title
 //       << ", date: " << date
@@ -21,17 +25,17 @@ struct Lesson {
 //}
 //void PrintTimeTable(const vector<string> &titles, const vector<string> &dates, const vector<string> &times,
 //                    vector<unsigned short> &rooms) {
-//  int i = 0;
-//  while (i < titles.size()) {
-//    // НО м.б. проблемы, если данные не согласованы, например - размер векторов разный
-//    PrintLesson(titles[i], dates[i], times[i], rooms[i]);
-//    ++i;
+//   int i = 0;
+//   while (i < titles.Size()) {
+//     // НО м.б. проблемы, если данные не согласованы, например - размер векторов разный
+//     //PrintLesson(titles[i], dates[i], times[i], rooms[i]);
+//     ++i;
 //  }
 //}
 void PrintLesson(const Lesson &lesson) {
-//  cout << "Title: " << lesson.title
-//       << ", date: " << lesson.date
-//       << ", time: " << lesson.time
+    //  cout << "Title: "  << lesson.title
+    //       << ", date: " << lesson.date
+    //       << ", time: " << lesson.time
 //       << ", room: " << lesson.room << '\n';
   cout << lesson.to_string();
 }

@@ -40,20 +40,27 @@
 using namespace std;
 
 int main() {
-  cout << "Calculation of the sqrt(a)\n";
-  cout << "Input nonnegative number: ";
-  double a;
-  double res;
-  cin >> a;
-  assert(a >= 0 && " a must be nonnegative."); // Предполагается, что значение а неотрицательное
+    cout << "Calculation of the sqrt(a)\n";
+    cout << "Input nonnegative number: ";
+    double a;
+    double res;
+    cin >> a;
+    cout << "a= " << a << '\n';
+    //  if (a <0 ) {
+    //    cout << "Input is negative number. Bye.";
+    //    return 0;
+    // }
 
-//  double a = 7.5;
-//  b = a * 3;
-  res = 100 / 0;
-  char n = 32768;
-  //res = sqrt(a);
-  cout << "The result of sqrt(" << a << ") is equal " << res << '\n';
-  return 0;
+    // assert(a >= 0 && " a must be nonnegative."); // Предполагается, что
+    //  значение а неотрицательное
+
+    //  double a = 7.5;
+    //  b = a * 3;
+    // res = 100 / 0;
+    //  char n = 32768;
+    res = 42; // sqrt(a);
+    cout << "The result of sqrt(" << a << ") is equal " << res << '\n';
+    return 0;
 }
 
 //assert( a>=0 && " a must be nonnegative."); // Предполагается, что значение а неотрицательное

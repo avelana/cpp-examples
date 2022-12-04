@@ -31,10 +31,10 @@ void PrintContainer(std::vector<int> &vec, const std::string &title) {
 
 // Возврат по ссылке обычно используется для возврата аргументов, переданных в функцию по ссылке.
 // Здесь НЕ допустим возврат по ссылке, только по значению
-// ! НЕЛЬЗЯ возвращать ссылку на локальныю переменную, которая уничтожается после выполнения функции.
-// Подсчет количества вхождений значения value
+// ! НЕЛЬЗЯ возвращать ссылку на локальныю переменную, которая уничтожается после выполнения
+// функции. Подсчет количества вхождений значения value_
 template<typename T>
-// int& CountItem(std::vector<T> vec, T value) {  // ERROR int&
+// int& CountItem(std::vector<T> vec, T value_) {  // ERROR int&
 int CountItem(std::vector<T> vec, T value) {
   int count = 0;
   for (auto i : vec) {

@@ -10,15 +10,15 @@ class Shape {
   int width, height;
 
  public:
-  Shape(int a = 0, int b = 0) {
-    width = a;
-    height = b;
-  }
-  int area() {
-    std::cout << "Parent class area :\n";
-    return 0;
-  }
+     Shape(int a = 0, int b = 0) {
+         width = a;
+         height = b;
+     }
 
+     virtual int area() {
+         std::cout << "Parent class area :\n";
+         return 0;
+     }
 };
 
 #endif //DEMOPOLYMORPHISM_SRC_SHAPE_H_

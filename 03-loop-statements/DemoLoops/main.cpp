@@ -1,5 +1,6 @@
-#include <vector>
 #include <iostream>
+#include <vector>
+
 template<typename T>
 void PrintValues(std::vector<T> nums, std::string title) {
   std::cout << title << ":\n";
@@ -10,24 +11,37 @@ void PrintValues(std::vector<T> nums, std::string title) {
 }
 
 int main() {
-  // ---- FOR
+    // FOR
+    std::vector<int> list(101);
+    int i;
+    for (i = 1; i <= 100; ++i) {
+        std::cin >> list[i];
+    }
+    using std::string;
+    using std::vector;
 
-//  int sum = 0;
-//  for (int i = 1 ; i <= 100; ++i) {
-//    sum += i;
-//  }
-//  int sum = 0;
-//  int i = 1 ;
-//  for (; ; ) {
-//    if (i <= 100) {
-//      sum += i;
-//    }else{
-//      break;
-//    }
-//    ++i;
-//  }
+    //    // Вектор из 6 целых чисел
+    //    vector<int> qqv = ( 5 , 7 , 9 , 4 , 6 , 8 } ;
+    //     // Вектор из четырех строк
+    //     vector<string> philosopher = { "Кant" , " Plato" , " Hume" ,
+    //                                     "Кierkeqaard" } ;
 
-// ---- WHILE
+    int sum = 0;
+    for (int i = 1; i <= 100; ++i) {
+        sum += i;
+    }
+    //  int sum = 0;
+    //  int i = 1 ;
+    //  for (; ; ) {
+    //    if (i <= 100) {
+    //      sum += i;
+    //    }else{
+    //      break;
+    //    }
+    //    ++i;
+    //  }
+
+    // ---- WHILE
 
 // int sum = 0;
 // int i = 1 ;
@@ -66,19 +80,19 @@ int main() {
 //  }
 
 //
-//  std::vector<int> array{};// { 12, 10, 8, 6, 4, 2, 1 };
-//  //std::cout << "The length is: " << array.size() << '\n';
-//  int number;
-//  std::cin >> number;
+    //  std::vector<int> array{};// { 12, 10, 8, 6, 4, 2, 1 };
+    //  //std::cout << "The length is: " << array.Size() << '\n';
+    //  int number;
+    //  std::cin >> number;
 //  int tmp;
 //  for (int i = 0; i < number; ++i) {
 //    std::cin >> tmp;
 //    array.push_back(tmp);
 //  }
 
-//  for (int i = 0; i < array.size(); ++i) {
-//    tmp = array[i];
-//    sum += tmp;
+    //  for (int i = 0; i < array.Size(); ++i) {
+    //    tmp = array[i];
+    //    sum += tmp;
 //  }
 
   // RANGE_BASED_FOR_LOOP

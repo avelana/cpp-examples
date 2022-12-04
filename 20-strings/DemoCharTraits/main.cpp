@@ -50,34 +50,39 @@ int main() {
   ci_string s1 = "Hello";
   ci_string s2 = "heLLo";
   if (s1 == s2)
-    std::cout << s1 << " and " << s2 << " are equal\n";
+      std::cout << s1 << " and " << s2 << " are equal\n";
 
-//  // ПРИМЕР ЗАМЕНЫ ТОЧЕК НА !
-//  std::string text
-//      ("Lorem ipsum dolor sit amet. Unde omnis dolor repellendus architecto. Facilis est laborum et iusto odio dignissimos ducimus. Sequi nesciunt, neque porro quisquam est, omnis iste natus error. Sit voluptatem sequi nesciunt, neque porro quisquam est. Saepe eveniet, ut aut perferendis doloribus asperiores. Aspernatur aut odit aut odit aut odit aut officiis. Sunt, explicabo eligendi optio, cumque nihil impedit, quo minus. Voluptatem, quia dolor repellendus ratione voluptatem accusantium doloremque laudantium, totam rem aperiam.");
-//  int size = text.size();
-//  for (int ix = 0; ix < size; ++ix) {
-//    if (text[ix] == '.') {
-//      text[ix] = '!';
-//    }
-//  }
-//
-//  std::cout << text;
-//
-//  using namespace std;
-//  std::string filename = "input.txt";
-//  std::fstream s(filename, s.in);
-//
+  //  // ПРИМЕР ЗАМЕНЫ ТОЧЕК НА !
+  //  std::string text
+  //      ("Lorem ipsum dolor sit amet. Unde omnis dolor repellendus architecto. Facilis est laborum
+  //      et iusto odio dignissimos ducimus. Sequi nesciunt, neque porro quisquam est, omnis iste
+  //      natus error. Sit voluptatem sequi nesciunt, neque porro quisquam est. Saepe eveniet, ut
+  //      aut perferendis doloribus asperiores. Aspernatur aut odit aut odit aut odit aut officiis.
+  //      Sunt, explicabo eligendi optio, cumque nihil impedit, quo minus. Voluptatem, quia dolor
+  //      repellendus ratione voluptatem accusantium doloremque laudantium, totam rem aperiam.");
+  //  int size = text.Size();
+  //  for (int ix = 0; ix < Size; ++ix) {
+  //    if (text[ix] == '.') {
+  //      text[ix] = '!';
+  //    }
+  //  }
+  //
+  //  std::cout << text;
+  //
+  //  using namespace std;
+  //  std::string filename = "input.txt";
+  //  std::fstream s(filename, s.in);
+  //
 //  regex pat{R"(\w { 2 }\s*\d{ 5 } ( -\d {
 //    4 )) ? ) " } ; // Шаблон индекса
 //    for (string line; getline(file, line);) {
 //      smatch matches;
 //      if (reqex_search(line, matches, pat))
 //        //Полное соответствие
-//        cout << lineno << " : 11 << matches [ O ] << ' \n ' ;
-//      if (l < matches.size() && matches[l].matched)
-//        11
-//      Подша блон
+  //        cout << lineno << " : 11 << matches [ O ] << ' \n ' ;
+  //      if (l < matches.Size() && matches[l].matched)
+  //        11
+  //      Подша блон
 //      cout << " \ t : " << matches[l] << 1 \n
 //      ' ;
 //    }

@@ -1,24 +1,28 @@
 //// Example 1
-//#include <gtest/gtest.h>
-//TEST(SuiteName, TestName) {
-//
-//}
-int sum(int a, int b) {
-  return a + b;
-}
-// Example 1
 #include <gtest/gtest.h>
-TEST(SuiteName, TestName) {
-  ASSERT_TRUE(sum(5, 3) == 8);
+
+TEST(BasicTest, TestName) {
+    ASSERT_TRUE(0 == 0);
 }
 
-//#include <iostream>
+int sum(int a, int b) {
+    return a + b;
+}
+
+// Example 1
+#include <gtest/gtest.h>
+
+TEST(SuiteName, TestName1) {
+    ASSERT_TRUE(sum(5, 3) == 8);
+}
+
+// #include <iostream>
 //// Include the cmath library
-//#include <cmath>
-//using namespace std;
-//int sum(int a, int b) {
-//  return a + b;
-//}
+// #include <cmath>
+// using namespace std;
+// int sum(int a, int b) {
+//   return a + b;
+// }
 //
 //int main() {
 //  const int kN = 5;
@@ -52,12 +56,19 @@ TEST(SuiteName, TestName) {
 //}
 
 
-//long double Factorial(int n)
+// long double Factorial(int n)
 //{
-//  if(n < 0) // если пользователь ввел отрицательное число
-//    return 0; // возвращаем ноль
-//  if (n == 0) // если пользователь ввел ноль,
-//    return 1; // возвращаем факториал от нуля - не удивляетесь, но это 1 =)
-//  else // Во всех остальных случаях
-//    return n * fact(n - 1); // делаем рекурсию.
-//}
+//   if(n < 0) // если пользователь ввел отрицательное число
+//     return 0; // возвращаем ноль
+//   if (n == 0) // если пользователь ввел ноль,
+//     return 1; // возвращаем факториал от нуля - не удивляетесь, но это 1 =)
+//   else // Во всех остальных случаях
+//     return n * fact(n - 1); // делаем рекурсию.
+// }
+
+
+GTEST_API_ int main(int argc, char** argv) {
+    printf("Running main() from %s\n", __FILE__);
+    testing::InitGoogleTest(&argc, argv);
+    return RUN_ALL_TESTS();
+}

@@ -23,14 +23,14 @@ int main() {
   // at() - ЕСТЬ ПРОВЕРКА ВЫХОДА ЗА ГРАНИЦЫ!!!
   //cout << "v1.at(-5)= "<< v1.at(-5) << '\n';
   v1.push_back(25);
-  cout << "size = " << v1.size() << '\n';
+  cout << "Size = " << v1.size() << '\n';
   cout << "max_size = " << v1.max_size() << '\n';
   cout << "capacity = " << v1.capacity() << '\n';
   PrintVector(v1, ", ");
 
   // 2) создание пустого вектора
   vector<double> v2;
-  cout << "Input the size of the double vector\n";
+  cout << "Input the Size of the double vector\n";
   int n; // количество элементов последовательности
   cin >> n;
   cout << "\nInput vector items:\n";
@@ -42,7 +42,7 @@ int main() {
   // 3) создание последовательности заданного размера
   //    консольный ввод элементов
 
-  cout << "Input the size of the string vector\n";
+  cout << "Input the Size of the string vector\n";
   cin >> n;
   vector<string> v3(n); // создаем вектор заданной длины
 

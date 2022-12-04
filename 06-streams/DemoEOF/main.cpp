@@ -23,35 +23,34 @@ int main() {
   cout << "Example 2 (wrong out). File is empty.\n";
   file_path = "data/empty_file.txt";
   std::ifstream empty_fin(file_path); // Открываем пустой файл
-  if (!empty_fin.eof()) {     // eof() == false, т.к. мы еще ничего не читали
-    int value;
-    empty_fin >> value;       // Пытаемся читать число, а его там нет.
-    // Здесь eof() == true, но мы это не проверяем.
-    std::cout << value; // Выведется 0. ЧТО НЕВЕРНО!
+  if (!empty_fin.eof()) { // eof() == false, т.к. мы еще ничего не читали
+      int value;
+      empty_fin >> value; // Пытаемся читать число, а его там нет.
+      // Здесь eof() == true, но мы это не проверяем.
+      std::cout << value; // Выведется 0. ЧТО НЕВЕРНО!
   }
   std::cout << '\n';
 
   cout << "Example 3 (empty out. It is correct).\n";
   // Объекты std::istream умеют преобразовываться в bool,
-  // каждая операция чтения возвращает ссылку на std::istream.
-  // Поэтому идиоматичный код выглядит следующим образом:
-  std::ifstream input_stream(file_path);
-  int value;
-  while (input_stream >> value) {
-    cout << value; // or do smth with value
-  }
-
+  // кдиоматичный код выглядит следующим образом:
+  //  std::ifstream input_stream(file_path);
+  //  int value_;
+  //  while (input_stream >> value_) {
+  //    cout << value_; // or do smth with value_
+  //  }аждая операция чтения возвращает ссылку на std::istream.
+  // Поэтому и
   cout << "Example 4. File is not empty.\n";
   file_path = "data/input.txt";
-//  std::ifstream input(file_path);
-//  // Или для строки:
-//  string str;
-//  while (getline(input, str)) {
-//    cout << str;
-//  }
-//
-//
-//  // Или сразу для нескольких значений:
+  //  std::ifstream input(file_path);
+  //  // Или для строки:
+  //  string str;
+  //  while (getline(input, str)) {
+  //    cout << str;
+  //  }
+  //
+  //
+  //  // Или сразу для нескольких значений:
 //  string value1, value2;
 //  while (input >> value1 >> value2) {
 //    cout << value1 << value2;
@@ -61,7 +60,7 @@ int main() {
 
 
   std::ifstream file(file_path);
-  // typical C++ I/O loop uses the return value of the I/O function
+  // typical C++ I/O loop uses the return value_ of the I/O function
   // as the loop controlling condition, operator bool() is used here
   //for (int n; file >> n;) {
   int n;

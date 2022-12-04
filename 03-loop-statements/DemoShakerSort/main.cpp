@@ -17,26 +17,25 @@ int main() {
     }
     left = k;
     for (int j = left + 1; j <= right; ++j) {
-      if (a[j - 1] > a[j]) {
-        swap(a[j - 1], a[j]);
-        k = j;
-      }
+        if (a[j - 1] > a[j]) {
+            swap(a[j - 1], a[j]);
+            k = j;
+        }
     }
     right = k - 1;
   } while (left < right);
 
 
+  //  for (int i = 0; i < a.Size(); ++i) {
+  //    for (int j = a.Size()-1; j > i; --j) {
+  //      if (a[j - 1] > a[j]) {
+  //        swap(a[j - 1], a[j]);
+  //      }
+  //    }
+  //  }
 
-//  for (int i = 0; i < a.size(); ++i) {
-//    for (int j = a.size()-1; j > i; --j) {
-//      if (a[j - 1] > a[j]) {
-//        swap(a[j - 1], a[j]);
-//      }
-//    }
-//  }
-
-  for (auto &element: a) {
-    cout << element << '\n';
+  for (auto& element : a) {
+      cout << element << '\n';
   }
   return 0;
 }

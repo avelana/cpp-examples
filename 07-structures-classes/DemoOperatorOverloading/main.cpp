@@ -1,24 +1,42 @@
-#include <iostream>
-#include <fstream>
-#include <vector>
+#include "BankAccount.h"
+#include "BankAccountList.h"
+#include "DollarAccout.h"
 #include "Time.h"
+#include <fstream>
+#include <iostream>
+#include <vector>
+
+class A {
+public:
+    A() { std::cout << "A\n"; }
+};
+
+class B {
+private:
+    A m_a; // B содержит A, как переменную-член
+
+public:
+    B() { std::cout << "B\n"; }
+};
+
+B b;
 
 class Program {
- private:
-  static std::string FILE_OUT;//("time.txt");
- public:
-  static int Main() {
-    Time tmp{4, 30, 25};
-    std::cout << tmp.ToString() << '\n';
+private:
+    static std::string FILE_OUT; //("time.txt");
 
-    using std::cout;
-    using std::endl;
-    using std::vector;
+    static void TimeExample() {
+        Time tmp{4, 30, 25};
+        std::cout << tmp.ToString() << '\n';
 
-    // Результаты забега: ЭСТАФЕТА
-    // Экиден – это эстафета на марафонской дистанции 42км 195м.
-    //В команде 6 человек
-    // http://atblog.ru/2010/11/26/chiba-ekiden-rezultaty/
+        using std::cout;
+        using std::endl;
+        using std::vector;
+
+        // Результаты забега: ЭСТАФЕТА
+        // Экиден – это эстафета на марафонской дистанции 42км 195м.
+        // В команде 6 человек
+        // http://atblog.ru/2010/11/26/chiba-ekiden-rezultaty/
 
     Time start;
     Time result{2, 11, 19}; //2:11:35
@@ -56,32 +74,116 @@ class Program {
 
 
     // cout << sportsman1;
-//    cout << sportsman2 << sportsman3;
-//
-//    std::ofstream fout;
-//    fout.open(FILE_OUT);
-//    Time trip(12, 40) ;
-//    fout << trip;
+    //    cout << sportsman2 << sportsman3;
+    //
+    //    std::ofstream fout;
+    //    fout.open(FILE_OUT);
+    //    Time trip(12, 40) ;
+    //    fout << trip;
 
 
-    //cout << "Total time = " << (sportsman1 + sportsman2 + sportsman3 + sportsman4 + sportsman5 + sportsman6).ToString();
-    return 0;
-  }
+    // cout << "Total time = " << (sportsman1 + sportsman2 + sportsman3 + sportsman4 + sportsman5 +
+    // sportsman6).ToString();
+    }
+
+    static void BankAccountExample() {
+        // BankAccount bank;
+        BankAccount bank_account1{200};
+        BankAccount bank_account2(250);
+        BankAccount totalSum = bank_account1 + bank_account2;
+
+        std::cout << "I have " << totalSum.getValue() << " rub." << std::endl;
+        std::cout << "I have " << totalSum << " rub." << std::endl;
+        std::cout << "I not have " << !totalSum << " rub." << std::endl;
+        std::cout << "Compare " << (bank_account1 == bank_account2) << std::endl;
+        std::cout << bank_account1 << '\n';
+        std::cout << ++bank_account1 << '\n';
+        std::cout << bank_account1++ << '\n';
+        std::cout << bank_account1 << '\n';
+        std::cout << --bank_account1 << '\n';
+        std::cout << bank_account1-- << '\n';
+        std::cout << bank_account1 << '\n';
+    }
+
+    static void ArrayExample() {
+        BankAccount bank_account1{800};
+        BankAccount bank_account2(200);
+
+        BankAccountList array;
+        array.add(bank_account1);
+        array.add(bank_account2);
+
+        std::cout << "\nOperator []\n";
+        std::cout << array[0] << '\n';
+        std::cout << array[1] << '\n';
+
+        BankAccount bank_account3{500};
+        array[1] = bank_account3; // вызывается неконстантная версия operator[]()
+        std::cout << array[0] << '\n';
+        std::cout << array[1] << '\n';
+        // std::cout << array[10] << '\n';
+
+        int k = bank_account2;
+        std::cout << "k = " << k;
+
+        const BankAccountList carray{BankAccount{900}};
+        BankAccount bank_account4{400};
+        // carray[0] = bank_account4; // ошибка компиляции: вызывается константная версия
+        // operator[](), которая возвращает константную ссылку. Выполнять операцию присваивания
+        // нельзя
+        std::cout << carray[0];
+
+        DollarAccout d{100};
+        BankAccount ba = d;
+
+        std::cout << ba;
+
+        int a = 7; // копирующая инициализация
+        BankAccount vtb = BankAccount(80); // копирующая инициализация, вызывается BankAccount(80)
+        BankAccount invest =
+            9; // копирующая инициализация. Компилятор будет искать пути конвертации 9 в
+               // BankAccount, что приведет к вызову конструктора BankAccount(9)
+        std::cout << invest;
+    }
+
+public:
+    static int Main() {
+        // TimeExample();
+        // BankAccountExample();
+        ArrayExample();
+        return 0;
+    }
 };
 
-// инициализация статического озя за пределами объявления класса
+// инициализация статического поля за пределами объявления класса
 std::string Program::FILE_OUT = "time.txt";
+
+// An object of this type represents a linear function of one variable a*x + b.
+struct Linear {
+    double a, b;
+
+    double operator()(double x) const { return a * x + b; }
+};
 
 int main() {
 
-  return Program::Main();
+    // return Program::Main();
 
+    Linear f{2, 1}; // Represents function 2x + 1.
+    Linear g{-1, 0}; // Represents function -x.
+    // f and g are objects that can be used like a function.
 
-  //укороченная оценку (булевых выражений) - short-circuit evaluation.
-  int i = 1;
-  if (false && ++i) {
+    double f_0 = f(0);
+    double f_1 = f(1);
 
-  }
-  std::cout << "i = " << i << '\n';
+    double g_0 = g(0);
 
+    std::cout << "f_0= " << f_0;
+    return 0;
+    // укороченная оценку (булевых выражений) - short-circuit evaluation.
+    //  int i = 1;
+    //  if (false && ++i) {
+    //
+    //  }
+    //  std::cout << "i = " << i << '\n';
 }

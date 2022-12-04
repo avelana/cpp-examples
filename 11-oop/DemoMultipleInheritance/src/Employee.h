@@ -16,8 +16,10 @@ class Employee {
   }
 
   std::string getEmployer() { return employer_; }
+
   double getWage() { return wage_; }
-  std::string toString() { return "Employee"; }
+
+  std::string toString() { return "Employee{" + std::to_string(wage_) + "}"; }
 };
 
 #endif //DEMOMULTIPLEINHERITANCE_SRC_EMPLOYEE_H_

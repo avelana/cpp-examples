@@ -66,14 +66,14 @@ int main() {
 //
 //int main()
 //{
-//  std::vector<double> a= {0, 30, 45, 60, 90, 180};
-//  std::vector<double> r(a.size());
-//  double pi = acos(-1);
+//   std::vector<double> a= {0, 30, 45, 60, 90, 180};
+//   std::vector<double> r(a.Size());
+//   double pi = acos(-1);
 //
 //  std::transform(a.begin(), a.end(), r.begin(),
 //                 std::bind1st(std::multiplies<double>(), pi / 180.));
 //// equivalent lambda: [pi](double a){ return a*pi/180.; });
 //
-//  for(size_t n = 0; n < a.size(); ++n)
+//  for(size_t n = 0; n < a.Size(); ++n)
 //    std::cout << a[n] << " deg = " << r[n] << " rad\n";
 //}

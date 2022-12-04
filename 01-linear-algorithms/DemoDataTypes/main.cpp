@@ -28,7 +28,7 @@ int main() {
   std::vector<int> numbers = {7, 1, 2, 3, 4};
 
   numbers[0]++;
-  std::cout << "size =  " << numbers.size() << '\n';
+  std::cout << "Size =  " << numbers.size() << '\n';
 
   for (auto tmp : numbers) {
     std::cout << tmp << '\n';

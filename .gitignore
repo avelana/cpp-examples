@@ -1,3 +1,7 @@
 .idea/
 cmake-build-debug/
 cmake-build-release/
+/99-tests/
+/cmake-build-debug-mingw/
+/spdlog/
+/glog/

@@ -22,12 +22,10 @@ int main() {
   for (auto &tmp:s1) {
     cout << tmp;
   }
-  cout << "\nThe size of the set is initially " << s1.size()
-       << "." << endl;
+  cout << "\nThe Size of the set is initially " << s1.size() << "." << endl;
 
   s1.clear();
-  cout << "The size of the set after clearing is "
-       << s1.size() << "." << endl;
+  cout << "The Size of the set after clearing is " << s1.size() << "." << endl;
 
   ms1.insert(1);
   ms1.insert(2);

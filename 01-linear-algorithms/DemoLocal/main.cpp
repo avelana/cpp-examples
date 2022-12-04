@@ -1,6 +1,4 @@
 // https://ru.stackoverflow.com/questions/449291/Отображение-кириллицы-в-clion
-
-
 //#include <iostream>
 //#include <locale>
 //#include <codecvt>
@@ -31,16 +29,23 @@
 //}
 //
 //#include<iostream>
-//#include<clocale>
-//#include <windows.h>
-//using namespace std;
+// #include<clocale>
+// #include <windows.h>
+// using namespace std;
 //
-//int main()
+// int main()
 //{
-//  //setlocale(LC_CTYPE, "");
+//   //setlocale(LC_CTYPE, "");
 //
-//  SetConsoleCP (CP_UTF8);
-//  SetConsoleOutputCP (CP_UTF8);
+//   SetConsoleCP (CP_UTF8);
+//   SetConsoleOutputCP (CP_UTF8);
+
+//  auto  tmp = GetConsoleOutputCP();
+//  string test = u8"Russian:вапршывгарп Greek: αβγδ; German: Übergrößenträger";
+//  SetConsoleOutputCP(CP_UTF8);
+//  cout << test;
+
+//  SetConsoleOutputCP(tmp);
 //
 //  cout << "Русский текст?! Да ладно!" << endl;
 //  char ch ;
@@ -50,8 +55,8 @@
 //  return 0;
 //}
 
-#include <iostream>
 #include <cctype>
+#include <iostream>
 #include <windows.h>
 using namespace std;
 

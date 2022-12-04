@@ -7,21 +7,27 @@ struct NaturalNumber {
     return std::to_string(value);
   };
 };
-NaturalNumber TheNextNumber(NaturalNumber n) {
-  NaturalNumber tmp{++n.value};
-  return tmp;
+
+// NaturalNumber TheNextNumber(NaturalNumber& n) {
+////  NaturalNumber tmp{++n.value_};
+////  return tmp;
+////};
+void TheNextNumber(NaturalNumber& n) {
+    n.value++;
 };
 
 int main() {
   NaturalNumber a{100};
   NaturalNumber b{};
-  b = TheNextNumber(a);
+  // b = TheNextNumber(a);
 
-  cout << a.to_string() << ' ' << b.to_string() << '\n';
+  cout << a.to_string() << ' ' << b.value << '\n';
   NaturalNumber num{};
+
   for (int i = 1; i <= 10; ++i) {
-    cout << num.to_string() << ' ';
-    num = TheNextNumber(num);
+      cout << num.to_string() << ' ';
+      //    num = TheNextNumber(num);
+      TheNextNumber(num);
   }
   cout << '\n';
 

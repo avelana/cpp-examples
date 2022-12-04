@@ -9,13 +9,16 @@
 
 // Класс Teacher открыто наследует свойства классов Human и Employee
 class Teacher : public Human, public Employee {
- private:
-  int teacherGrade_; // ранг
+private:
+    int teacherGrade_; // ранг
 
- public:
-  Teacher(std::string name, int age, std::string employer, double wage, int teachesGrade)
-      : Human(name, age), Employee(employer, wage), teacherGrade_(teachesGrade) {
-  }
+public:
+    Teacher(std::string name, int age, std::string employer, double wage, int teachesGrade)
+        : Human(name, age), Employee(employer, wage), teacherGrade_(teachesGrade) { }
+
+    std::string toString() {
+        return Human::toString() + Employee::toString() + +", " + std::to_string(teacherGrade_);
+    }
 };
 
 #endif //DEMOMULTIPLEINHERITANCE_SRC_TEACHER_H_

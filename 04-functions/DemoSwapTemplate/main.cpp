@@ -33,9 +33,9 @@ int main() {
   Swap(xc, yc);
   std::cout << "xc = " << xc << ", yc = " << yc << '\n';
 //Неявная реализация
-/*
- * en.cppreference.com/w/cpp/language/function_template
- */
+  /*
+   * en.cppreference.com/value_/cpp/language/function_template
+   */
   f<double>(1); // создает и вызывает f <double> (double)
   f<>('a'); // создает и вызывает f <char> (char)
   f(7); // создает и вызывает f <int> (int)
