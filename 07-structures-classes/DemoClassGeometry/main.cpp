@@ -20,6 +20,8 @@ class Point {
 public:
     Point(double newX, double newY) : x(newX), y(newY) { }
 
+    Point() { }
+
     double getX() { return x; }
 
     double getY() { return y; }
@@ -47,11 +49,7 @@ private:
 // struct LineSegment {
 class LineSegment {
 public:
-    LineSegment() {
-        start = nullptr;
-        end = nullptr;
-        length = 0;
-    } // Раньше компилятор делал это сам
+    LineSegment() : start(0, 0), end(0, 0), length(0) { } // Раньше компилятор делал это сам
 
     // ~LineSegment() {}
     //  LineSegment() {

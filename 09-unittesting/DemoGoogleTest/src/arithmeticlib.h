@@ -7,4 +7,8 @@
 
 int Factorial(int n);
 
+int sum(int a, int b) {
+    return a + b;
+}
+
 #endif // PRCPP_1SEM_09_UNITTESTING_DEMOGOOGLETEST_SRC_ARITHMETICLIB_H_

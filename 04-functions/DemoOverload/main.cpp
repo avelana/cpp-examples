@@ -10,9 +10,10 @@ auto Equal(double d1, double d2) {
     return (d1 == d2);
 }
 
-// bool Equal(int& i1, int i2){
-//   return (bool)7;
-// }
+bool Equal(int& i1, int i2) {
+    return (bool)7;
+}
+
 //
 // int Equal(int i1, int i2) {
 //   return 8;

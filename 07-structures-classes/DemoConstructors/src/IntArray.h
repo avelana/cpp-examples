@@ -12,7 +12,7 @@ public:
     size_t size() const;
     void resize();
 
-    explicit IntArray(int s) : size_{s}, data_{new int[s]};
+    explicit IntArray(size_t s);
 
     ~IntArray() { delete[] data_; }; // Деструктор
 

@@ -2,10 +2,16 @@ cmake_minimum_required(VERSION 3.15)
 project(DemoAddressSanitizer)
 
 #https://www.jetbrains.com/help/clion/google-sanitizers.html#Configuration
-set(CMAKE_CXX_STANDARD 14)
+set(CMAKE_CXX_STANDARD 17)
 #set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -fsanitize=[sanitizer_name] [additional_options] [-g] [-OX]")
 
-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -fsanitize=address -fno-omit-frame-pointer -g -O1 -fsanitize-recover=address")
+#set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -fsanitize=address
+#  -fno-omit-frame-pointer -g -O1 -fsanitize-recover=address")
+
+
+# TODO  - DOESNOT WORK
+
+
 #-halt_on_error=false
 #set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -fsanitize=address -O1 -fno-omit-frame-pointer -g")
 #set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -O -g -fsanitize=address")

@@ -9,7 +9,7 @@ int main() {
   char ch0 = 48;
   char ch1 = 'F';
   //char ch2 = 'W';
-  char ch2 = 'Ю';
+  char ch2 = 'U';
   std::cout << ch0 << " "
             << ch1 << " "
             << ch2 << "\n";

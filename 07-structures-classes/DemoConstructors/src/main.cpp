@@ -28,16 +28,20 @@ int main() {
     char c{'d'}; // uniform инициализация
 
     IntArray const* ptr = foo();
-    ptr->resize(); // error
+    // ptr->resize(); // error
     ptr->size(); // ok
 
     IntArray a1(10);
     IntArray a2(20);
     IntArray a3 = a1; // копирование - Используется копирующий конструктор
-    a2 = a1; // присваивание - 11 Используется копирующее присваивание
+    // a2 = a1; // присваивание - Используется копирующее присваивание
 
 
     Time time = 123;
     std::cout << "Hello, World!" << std::endl;
     return 0;
+}
+
+IntArray* foo() {
+    return new IntArray(7);
 }

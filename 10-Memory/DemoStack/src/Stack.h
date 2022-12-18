@@ -5,6 +5,7 @@
 #ifndef DEMOSTACK_SRC_STACK_H_
 #define DEMOSTACK_SRC_STACK_H_
 
+#include <exception>
 #include <iostream>
 using namespace std;
 
@@ -59,7 +60,7 @@ public:
     // При вытягивании элемента из стека память не переопределяется
     T pop() {
         if (top == 0)
-            return 0; // стек пуст
+            throw std::exception(); // стек пуст
         top--;
         return stack[top];
     }

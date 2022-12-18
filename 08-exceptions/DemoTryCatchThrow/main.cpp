@@ -3,11 +3,10 @@
 #include <iostream>
 
 // Пример 1
-// int main() {
-//  throw  1; //прекращение вызова после создания экземпляра int
-//  return 0;
-//}
-
+int main() {
+    throw 1; // прекращение вызова после создания экземпляра int
+    return 0;
+}
 
 // Пример 2
 // #include <cstdlib>

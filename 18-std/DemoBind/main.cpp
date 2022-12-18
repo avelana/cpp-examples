@@ -4,8 +4,8 @@
 #include <memory>
 #include <functional>
 
-void f(int n1 = 1, int n2 = 1, int n3 = 1, const int &n4, int n5) {
-  std::cout << n1 << ' ' << n2 << ' ' << n3 << ' ' << n4 << ' ' << n5 << '\n';
+void f(int n1 = 1, int n2 = 1, int n3 = 1, const int& n4 = 0, int n5 = 0) {
+    std::cout << n1 << ' ' << n2 << ' ' << n3 << ' ' << n4 << ' ' << n5 << '\n';
 }
 
 int g(int n1) {

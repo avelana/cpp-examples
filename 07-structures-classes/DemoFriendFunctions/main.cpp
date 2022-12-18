@@ -8,10 +8,10 @@ public:
     Integer(int i) : value(i) { }
 
     // унарный +
-    friend const Integer& operator+(const Integer& i);
+    friend Integer operator+(const Integer& i);
 
     // унарный -
-    friend const Integer operator-(const Integer& i);
+    friend Integer operator-(const Integer& i);
 
     // префиксный инкремент
     friend const Integer& operator++(Integer& i);
@@ -28,11 +28,11 @@ public:
 };
 
 // унарный плюс ничего не делает.
-const Integer& operator+(const Integer& i) {
-    return i.value;
+Integer operator+(const Integer& i) {
+    return Integer(i.value);
 }
 
-const Integer operator-(const Integer& i) {
+Integer operator-(const Integer& i) {
     return Integer(-i.value);
 }
 
@@ -64,6 +64,7 @@ const Integer operator--(Integer& i, int) {
 
 std::ostream& operator<<(std::ostream& os, const Integer& i) {
     os << i.value;
+    return os;
 }
 
 class Program {

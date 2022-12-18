@@ -74,10 +74,12 @@ bool ReadFileByLineTillDelimiter(const std::string &file_path) {
            << ' ' << str_hour << ':' << str_minute << endl;
     }
     cout << "File \"" << file_path << "\" has read!\n";
+    return true;
   } else {
     cout << "error!" << endl;
     cerr << "It is not possible to open input file \"" << file_path << "\"\n";
     //exit(EXIT_FAILURE);
+    return false;
   }
 
 }

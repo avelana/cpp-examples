@@ -19,7 +19,7 @@ public:
 };
 
 int main() {
-    B;
+    B obj;
     return 0;
 }
 

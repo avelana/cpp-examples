@@ -1,12 +1,12 @@
+#include <iostream>
+
 #include "spdlog/spdlog.h"
 // https://github.com/gabime/spdlog
-
 // Compile time log levels
 // define SPDLOG_ACTIVE_LEVEL to desired level
 #define SPDLOG_ACTIVE_INFO
 
-#include "src/controller/Program.h"
-#include <iostream>
+#include "controller/Program.h"
 
 int main() {
 

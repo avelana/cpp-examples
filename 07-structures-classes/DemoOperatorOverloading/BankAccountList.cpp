@@ -26,27 +26,3 @@ void BankAccountList::add(BankAccount b) {
     list.push_back(b);
 }
 
-class Simple {
-public:
-    Simple() { }
-
-    operator bool() const { return true; }
-};
-
-class SimpleExplicit {
-public:
-    explicit SimpleExplicit() { }
-
-    explicit operator bool() const { return true; }
-};
-
-int main(int, char**) {
-    Simple s7{};
-    bool b7 = s7;
-
-    SimpleExplicit se7{};
-    // bool be7 = se7; - COMPILE ERROR
-    bool be7 = static_cast<bool>(se7);
-
-    return 0;
-}

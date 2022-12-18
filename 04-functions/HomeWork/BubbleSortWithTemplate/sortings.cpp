@@ -1,22 +1,22 @@
 //
 // Created by volha on 22.09.2019.
 //
-// #ifdef sortings_h
+// #ifdef SORTINGS_H
 
-#include "sortings.h"
-#include <vector>
-using namespace std;
-
-template<typename T>
-void BubbleSort(vector<T>& a) {
-    for (int i = 0; i < a.size(); ++i) {
-        for (int j = a.size() - 1; j > i; --j) {
-            if (a[j - 1] > a[j]) {
-                swap(a[j - 1], a[j]);
-            }
-        }
-    }
-};
+// #include "sortings.h"
+// #include <vector>
+// using namespace std;
+//
+// template<typename T>
+// void BubbleSort(vector<T>& a) {
+//     for (int i = 0; i < a.size(); ++i) {
+//         for (int j = a.size() - 1; j > i; --j) {
+//             if (a[j - 1] > a[j]) {
+//                 swap(a[j - 1], a[j]);
+//             }
+//         }
+//     }
+// };
 
 // #endif
 
