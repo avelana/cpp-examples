@@ -7,3 +7,5 @@ cmake-build-release/
 /glog/
 /lib/
 
+/08-exceptions/DemoGlog/lib/
+/08-exceptions/DemoGlogClion/lib/
