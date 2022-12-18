@@ -1,11 +1,8 @@
 .idea/
 cmake-build-debug/
 cmake-build-release/
-/99-tests/
-/cmake-build-debug-mingw/
-/spdlog/
-/glog/
-/lib/
+cmake-build-debug-mingw/
+spdlog/
+glog/
+lib/
 
-/08-exceptions/DemoGlog/lib/
-/08-exceptions/DemoGlogClion/lib/
