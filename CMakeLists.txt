@@ -66,7 +66,6 @@ add_subdirectory(06-streams/DemoFStreamBasics)
 add_subdirectory(06-streams/DemoEOF)
 add_subdirectory(06-streams/DemoFunctionValues)
 
-
 add_subdirectory(07-structures-classes/DemoStructure)
 add_subdirectory(07-structures-classes/DemoStructureInitValues)
 add_subdirectory(07-structures-classes/DemoStructure&Functions)
@@ -115,6 +114,6 @@ add_subdirectory(18-std/DemoBind)
 
 add_subdirectory(20-strings/DemoCharTraits)
 add_subdirectory(20-strings/DemoCstring)
+add_subdirectory(70-project-code-blanks-with-spdlog-gtest)
 
-
-add_executable(prCPP_1sem main.cpp 11-oop/DemoStucture/src/NodeStack.h)
+#add_executable(prCPP_1sem main.cpp 11-oop/DemoStucture/src/NodeStack.h)
