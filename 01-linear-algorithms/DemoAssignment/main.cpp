@@ -11,7 +11,6 @@ int main() {
     int a3{5}; // uniform
     int a4 = {5};
 
-
     int f;
     char cha = 5;
     bool boolean = 1;
@@ -70,7 +69,7 @@ int main() {
 //  cout << "k = " << k << "  " << sd << "  " << df << '\n';
 
 //  double x { 2.7} ; // OK
-//  int у {x} ; // Ошибка : douЫe -> iтt может быть сужающим
+//  int у {x} ; // Ошибка : double -> int может быть сужающим
 //  int а (1000} ; // OK
 //  char b (а} ; // Ошибка : int -> char может быть сужающим
 
