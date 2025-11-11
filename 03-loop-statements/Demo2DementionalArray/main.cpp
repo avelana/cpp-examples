@@ -1,9 +1,11 @@
 /*
- * Пример ввода и вывода 2мерного массива
+ * Пример ввода и вывода 2-мерного массива
  */
 #include <iostream>
 #include <vector>
-using namespace std;
+using std::cout;
+using std::cin;
+using std::vector;
 
 int main() {
   int n; // n-количество строк 2мерного массива
